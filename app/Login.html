@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<!-- Declaração do tipo de documento, indicando que o arquivo é um documento HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma da página como português (Brasil) -->
+
+<head>
+    <!-- Definindo a codificação de caracteres -->
+    <meta charset="UTF-8"> 
+    <!-- Define o comportamento de renderização da página no Internet Explorer para o modo mais recente -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Define a viewport para torná-la responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página, exibido na aba do navegador -->
+    <title>Nova-X</title>
+    
+    <style>
+        /* Estilo para o corpo da página */
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            /* Definindo um gradiente de fundo */
+            background-image: linear-gradient(100deg,rgb(239, 160, 107), rgba(16, 16, 16, 0.745));
+        }
+
+        /* Estilo para a caixa (div) que envolve o conteúdo principal da página */
+        div{
+            background-color: rgba(0, 0, 0, 0.4); /* Cor de fundo com transparência */
+            position: absolute; /* Posição absoluta para centralizar a div */
+            top: 50%; /* Centraliza a div verticalmente */
+            left: 50%; /* Centraliza a div horizontalmente */
+            transform: translate(-50%,-50%); /* Ajusta o posicionamento para realmente centralizar a div */
+            padding: 30px; /* Adiciona um espaçamento interno à div */
+            border-radius: 20px; /* Bordas arredondadas */
+            color: white; /* Cor do texto dentro da div */
+        }
+
+        /* Estilo para os campos de entrada (inputs) */
+        input{
+            padding: 15px; /* Preenche os campos com 15px de espaçamento interno */
+            border: none; /* Remove a borda dos campos */
+            outline: none; /* Remove o contorno ao clicar nos campos */
+            font-size: 15px; /* Tamanho da fonte dos inputs */
+            width: 90%; /* Largura do input (90% da largura disponível) */
+        }
+
+        /* Estilo para os botões */
+        button{
+            background-color: dodgerblue; /* Cor de fundo do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 15px; /* Adiciona espaçamento interno ao botão */
+            width: 100%; /* Largura do botão ocupando toda a largura disponível */
+            border-radius: 10px; /* Bordas arredondadas */
+            color:white; /* Cor do texto dentro do botão */
+            font-size: 15px; /* Tamanho da fonte do botão */
+            cursor: pointer; /* Mostra o cursor de ponteiro indicando que o botão é clicável */
+            font-weight: bold; /* Deixa o texto do botão em negrito */
+        }
+
+        /* Estilo para quando o mouse passa sobre o botão */
+        button:hover{
+            background-color: deepskyblue; /* Altera a cor do botão ao passar o mouse */
+        }
+
+        /* Estilo para o texto do h4 (links de recuperação de senha e cadastro) */
+        h4:hover{
+            cursor: pointer; /* Mostra o cursor de ponteiro indicando que o texto é clicável */
+            text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+        }
+
+        /* Estilo para o link (a) */
+        a {
+            text-decoration: none; /* Remove o sublinhado do link */
+            color: white; /* Define a cor do link como branca */
+        }
+
+        /* Estilo para o link quando o mouse passa sobre ele */
+        a:hover {
+            text-decoration: none; /* Garante que o link não tenha sublinhado ao passar o mouse */
+        }
+
+        /* Estilo para o link após ter sido visitado */
+        a:visited {
+            color: white; /* Garante que o link tenha cor branca após ser visitado */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Caixa que envolve os elementos do formulário -->
+    <div>
+        <!-- Logo da aplicação (Nova-X) -->
+        <center><img src="LogoFundo.png" alt="Logo Nova-X" width="50%" height="50%"></center>
+
+        <!-- Título de boas-vindas -->
+        <h2>Seja Bem-vindo ao <br>Nova-X</h2>
+
+        <!-- Campo de entrada para CPF com restrições de tamanho (máximo e mínimo de 11 caracteres) -->
+        <input type="text" placeholder="CPF" maxlength="11" minlength="11">
+        <br><br>
+        
+        <!-- Campo de entrada para a senha -->
+        <input type="password" placeholder="Senha">
+        <br><br>
+        
+        <!-- Botão de "Entrar" -->
+        <button>Entrar</button>
+        <br>
+
+        <!-- Link para página de recuperação de senha -->
+        <h4><a href="RecuperarSenha.html">Esqueci Minha Senha</a></h4>
+
+        <!-- Link para página de cadastro -->
+        <h4><a href="Formulário.html">Cadastrar-se</a></h4>
+        
+    </div>
+
+</body>
+</html>
