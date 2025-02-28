@@ -1,1 +1,1 @@
-"# novaX" 
+# novaX
