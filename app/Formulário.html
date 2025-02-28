@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: linear-gradient(100deg,rgb(239, 160, 107), rgba(16, 16, 16, 0.745));
+        }
+        .box {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+        }
+        legend {
+            text-align: center;
+        }
+        .inputBox {
+            position: relative;
+        }
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+        }
+        #data_nascimento {
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            background-color: rgba(247, 243, 243, 0.785);
+        }
+        button {
+            background-color: dodgerblue;
+            border: none;
+            padding: 12px;
+            width: 50%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .botao-container {
+            display: flex;
+            justify-content: space-between;  /* Espalha os botões igualmente */
+            gap: 10px;  /* Espaço entre os botões */
+}
+        button:hover {
+            background-color: deepskyblue;
+        }
+        select {
+            padding: 10px;
+            width: 100%;
+            background-color: rgba(247, 243, 243, 0.785);
+            border: 1px solid white;
+            color: white;
+            font-size: 15px;
+        }
+        option {
+            color: black; 
+            background-color: white; 
+        }
+        .voltar {
+            background-color: dodgerblue; /* Altere a cor de fundo como desejar */
+            width: 50%; /* Modifique a largura, se necessário */
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+        }   
+
+        .voltar a {
+            color: white; /* Garante que o texto do link dentro do botão tenha cor branca */
+            text-decoration: none; /* Remove o sublinhado do link */
+        }
+
+        .voltar:hover {
+            background-color: deepskyblue; /* Muda a cor ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Cadastro Nova-X</b></legend>   
+                <br>
+                <div class="inputbox">
+                    <label for="nome" class="labelInput">Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div> 
+                <br>
+                <div class="inputbox">
+                    <label for="email" class="labelInput">E-mail:</label>
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                </div> 
+                <br>
+                <div class="inputbox">
+                    <label for="telefone" class="labelInput">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required maxlength="15">
+                </div> 
+                <br>
+                <div class="inputbox">
+                    <label for="cpf" class="labelInput">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required maxlength="11" minlength="11">
+                </div>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br>
+                <div class="inputbox">
+                    <label for="estado" class="labelInput">Estado:</label>
+                    <select name="estado" id="estado" class="inputUser" required>
+                        <option value=""disabled selected>Escolha o Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <br>
+                <div class="inputbox">
+                    <label for="cidade" class="labelInput">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                </div> 
+                <br>
+                <div class="inputbox">
+                    <label for="endereco" class="labelInput">Endereço:</label>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                </div> 
+                <br>
+            <div class="botao-container">    
+                <button>Cadastrar</button>
+                <button class="voltar" onclick="window.location.href='Login.html'">Voltar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
