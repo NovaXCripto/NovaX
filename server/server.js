@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+port = 3000
 
 app.use(express.json());
 
@@ -29,6 +30,6 @@ app.post('/cadastro', (req, res) => {
     }
 });
 
-app.listen(() => {
-    console.log(`Server running`);
+app.listen(port, () => {
+    console.log(`Server running in ${port}`);
 });
